@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 struct node {
   int element;
@@ -14,7 +14,7 @@ void outputTheList(struct node *item) {
   printf("\n");
 }
 
-int main() {
+struct node* createLinkedList() {
   int length;
   printf("Enter the length of the list (please enter a number): \n");
   scanf("%d", &length);
@@ -45,32 +45,8 @@ int main() {
   printf("Creating and printing the linked list:\n");
   outputTheList(HEAD);
 
-  //CHUNK REVERSING THE LIST
-  
-  int k;
-  printf("Enter chunk size: ");
-  scanf("%d", &k);
-
-  if (k <= 0) {
-    return;
-  }
-
-  struct node* CURRENT = HEAD;
-  PREV = NULL;
-
-  struct node* CHUNK_START = NULL;
-  struct node* PREV_CHUNK_END = NULL;
-  
-
-  while (CURRENT) {
-    CHUNK_START = CURRENT;
-    for (int j = 0; j < k; j++) {
-        struct node *NEXT = CURRENT->next;
-        CURRENT->next = PREV;
-        PREV = CURRENT;
-        CURRENT = NEXT;
-      }
-      CURRENT->next = CHUNK_START;
-  }
-  outputTheList(CURRENT);
+  return HEAD;
 }
+
+
+struct node* createLinkedList();
