@@ -22,6 +22,7 @@ struct node* createLinkedList() {
   int *array = malloc(length * sizeof(int));
 
   for (int i = 0; i < length; i++) {
+    
     printf("Enter element #%d: ", i);
     int el;
     scanf("%d", &el);
