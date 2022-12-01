@@ -19,7 +19,7 @@ int partition(int* a, int left, int right) {
     return s+1;
 }
 
-int quickSort(int* array, int left, int right) {
+void quickSort(int* array, int left, int right) {
     if (left < right) {
         int pivot = partition(array, left, right);
         quickSort(array, left, pivot-1);
