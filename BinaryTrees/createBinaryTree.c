@@ -14,7 +14,7 @@ void pushNodes(struct node *parent, int L, int* arr, int i) {
 }
 
 void printNodeandChildren(struct node* n) {
-    printf("%d", n->data);
+    printf("[%d]", n->data);
     if(n->leftChild){
         printNodeandChildren(n->leftChild);
     }
